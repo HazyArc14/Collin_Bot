@@ -1,14 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const leagueTalkedRecently = new Set();
-const fortniteTalkedRecently = new Set();
+const talkedRecently = new Set();
 
 var isReady = true;
 
 // function to return random number 1-4
 function randomWholeNum() {
-    return Math.floor(Math.random() * 4) + 1;
+  return Math.floor(Math.random() * 4) + 1;
 }
 
 client.on('ready', () => {
@@ -19,26 +18,16 @@ client.on('message', async message => {
     
     if(message.author.bot) return;
     
-    if (message.content.includes('fortnite')) {
-
-        if (fortniteTalkedRecently.has(message.author.id)) {
-            return;
-        } else {
+    if (talkedRecently.has(message.author.id)) {
+            message.channel.send("Wait 1 minute before getting typing this again. - " + message.author);
+    } else {
+    
+        if (message.content.includes('fortnite')) {
             message.channel.send({files: ["./assets/fortnite_sucks.jpg"]});
         }
 
-        fortniteTalkedRecently.add(message.author.id);
-        setTimeout(() => {
-            fortniteTalkedRecently.delete(message.author.id);
-        }, 60000);
-
-    }
-
-    if (isReady && (message.content.includes('aram') || message.content.includes('arams') || message.content.includes('league'))) {
-
-        if (leagueTalkedRecently.has(message.author.id)) {
-            return;
-        } else {
+        if (isReady && (message.content.includes('aram') || message.content.includes('arams') || message.content.includes('league'))) {
+            
 
             isReady = false;
             var voiceChannel = message.member.voiceChannel;
@@ -93,15 +82,14 @@ client.on('message', async message => {
             };
 
             isReady = true;
-
-            leagueTalkedRecently.add(message.author.id);
-            setTimeout(() => {
-              // Removes the user from the set after a minute
-              leagueTalkedRecently.delete(message.author.id);
-            }, 60000);
-
         }
-
+        
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 60000);
+        
     }
 
 });
