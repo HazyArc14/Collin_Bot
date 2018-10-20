@@ -234,7 +234,7 @@ client.on('message', async message => {
         }
         
     }
-    if (message.content.indexOf('!vaultOpen') === 0 && message.author.id == "148630426548699136") {
+    if (message.content.indexOf('!vaultOpen') === 0 && (message.author.id == "148630426548699136" || message.author.id == "93105200365043712")) {
         
         var vaultOpenValue = message.content.slice(11);
         if (vaultOpenValue == "true") {
