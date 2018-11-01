@@ -18,6 +18,7 @@ Audio Triggers:
 !fortFucker
 !goldfish
 !horn
+!horse
 !kirk
 !lag
 !licker
