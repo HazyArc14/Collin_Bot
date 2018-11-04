@@ -27,6 +27,7 @@ Audio Triggers:
 !neck
 !sameGame
 !snap
+!theClap
 !tinsel
 !yooo
 !warus
