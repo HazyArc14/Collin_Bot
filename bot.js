@@ -470,15 +470,6 @@ client.on('message', async message => {
       }
 
     }
-    if (message.content.indexOf('!theClap') === 0) {
-
-      if (typeof splitMessage[1] === 'undefined') {
-        triggerAudio(message, "theClap", "");
-      } else {
-        triggerAudio(message, "theClap", splitMessage[1]);
-      }
-
-    }
     if (message.content.indexOf('!tinsel') === 0) {
 
       if (typeof splitMessage[1] === 'undefined') {
