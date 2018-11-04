@@ -12,6 +12,7 @@ Presense Triggers:
 Audio Triggers:
 !aram
 !celsoHere
+!clap
 !croissant
 !croissantBass
 !dumbassGame
@@ -27,7 +28,6 @@ Audio Triggers:
 !neck
 !sameGame
 !snap
-!theClap
 !tinsel
 !yooo
 !warus
