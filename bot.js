@@ -262,7 +262,7 @@ client.on('message', async message => {
 
       var helpResponse = "```Since Your Little Bitch Ass Can't Remember Shit!\n\n" +
       "Presense Triggers:\n!setGame Overwatch\n!setListening Spotify\n!setWatching Youtube\n\n" +
-      "Audio Triggers:\n!aram\n!celsoHere\n!croissant\n!dumbassGame\n!fortFucker\n!goldfish\n!horn\n!horse\n!kirk\n!lag\n!licker\n!magicResist\n!monkey\n!neck\n!sameGame\n!snap\n!theClap\n!tinsel\n!yooo\n!warus\n!watch\n!weeee\n\n" +
+      "Audio Triggers:\n!aram\n!celsoHere\n!clap\n!croissant\n!dumbassGame\n!fortFucker\n!goldfish\n!horn\n!horse\n!kirk\n!lag\n!licker\n!magicResist\n!monkey\n!neck\n!sameGame\n!snap\n!tinsel\n!yooo\n!warus\n!watch\n!weeee\n\n" +
       "Image Triggers:\n!prime\n!zieg\n\n" +
       "Keywords: (black, fortnite, tank, mexican)```"
       triggerMessage(message, "help", helpResponse, true);
@@ -341,6 +341,15 @@ client.on('message', async message => {
         triggerAudio(message, "celsoHere", "");
       } else {
         triggerAudio(message, "celsoHere", splitMessage[1]);
+      }
+
+    }
+    if (message.content.indexOf('!clap') === 0) {
+
+      if (typeof splitMessage[1] === 'undefined') {
+        triggerAudio(message, "clap", "");
+      } else {
+        triggerAudio(message, "clap", splitMessage[1]);
       }
 
     }
