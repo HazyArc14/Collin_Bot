@@ -214,26 +214,26 @@ client.on('message', async message => {
         }
         
     }
-    if (message.content.indexOf('!amazon') === 0) {
+//     if (message.content.indexOf('!amazon') === 0) {
         
-        var amazonValue = message.content.slice(8);
-        if (amazonValue == "true") {
-            allowAmazonLinks = true;
-            message.channel.send("Amazon Links Allowed Set: " + allowAmazonLinks);
-            message.delete()
-              .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-              .catch(console.error);
+//         var amazonValue = message.content.slice(8);
+//         if (amazonValue == "true") {
+//             allowAmazonLinks = true;
+//             message.channel.send("Amazon Links Allowed Set: " + allowAmazonLinks);
+//             message.delete()
+//               .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+//               .catch(console.error);
             
-        } else {
-            allowAmazonLinks = false;
-            console.log("Condition Override Set: " + allowAmazonLinks);
-            message.channel.send("Amazon Links Allowed Set: false");
-            message.delete()
-              .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-              .catch(console.error);
-        }
+//         } else {
+//             allowAmazonLinks = false;
+//             console.log("Condition Override Set: " + allowAmazonLinks);
+//             message.channel.send("Amazon Links Allowed Set: false");
+//             message.delete()
+//               .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+//               .catch(console.error);
+//         }
         
-    }
+//     }
     if (message.content.indexOf('!vaultOpen') === 0 && (message.author.id == "148630426548699136" || message.author.id == "93105200365043712")) {
         
         var vaultOpenValue = message.content.slice(11);
@@ -562,17 +562,17 @@ client.on('message', async message => {
       triggerImage(message, "mexican", false);
 
     }
-    if (message.content.toLowerCase().includes('amazon.com')) {
+//     if (message.content.toLowerCase().includes('amazon.com')) {
 
-      if (!allowAmazonLinks) {
-          message.channel.send("Kelso says no fucking Amazon links!");
-          message.delete()
-              .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-              .catch(console.error);
+//       if (!allowAmazonLinks) {
+//           message.channel.send("Kelso says no fucking Amazon links!");
+//           message.delete()
+//               .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+//               .catch(console.error);
           
-      }
+//       }
 
-    }
+//     }
 
   }
 
