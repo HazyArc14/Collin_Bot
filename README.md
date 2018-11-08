@@ -14,29 +14,23 @@ Audio Triggers:
 !celsoHere
 !clap
 !croissant
-!croissantBass
 !dumbassGame
-!fortFucker
 !goldfish
 !horn
 !horse
 !kirk
 !lag
 !licker
-!magicResist
 !monkey
-!neck
 !sameGame
 !snap
 !tinsel
 !yooo
 !warus
-!watch
 !weeee
 
 Image Triggers:
 !prime
-!zieg
 
-Keywords: (black, fortnite, tank, mexican)
+Keywords: (black)
 ```
