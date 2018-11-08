@@ -241,9 +241,9 @@ client.on('message', async message => {
 
       var helpResponse = "```Since Your Little Bitch Ass Can't Remember Shit!\n\n" +
       "Presense Triggers:\n!setGame Overwatch\n!setListening Spotify\n!setWatching Youtube\n\n" +
-      "Audio Triggers:\n!aram\n!celsoHere\n!clap\n!croissant\n!dumbassGame\n!fortFucker\n!goldfish\n!horn\n!horse\n!kirk\n!lag\n!licker\n!magicResist\n!monkey\n!neck\n!sameGame\n!snap\n!tinsel\n!yooo\n!warus\n!watch\n!weeee\n\n" +
-      "Image Triggers:\n!prime\n!zieg\n\n" +
-      "Keywords: (black, fortnite, tank, mexican)```"
+      "Audio Triggers:\n!aram\n!celsoHere\n!clap\n!croissant\n!dumbassGame\n!goldfish\n!horn\n!horse\n!kirk\n!lag\n!licker\n!monkey\n!sameGame\n!snap\n!tinsel\n!yooo\n!warus\n!weeee\n\n" +
+      "Image Triggers:\n!prime\n\n" +
+      "Keywords: (black)```"
       triggerMessage(message, "help", helpResponse, true);
 
     }
@@ -494,11 +494,6 @@ client.on('message', async message => {
       triggerImage(message, "prime", true);
 
     }
-    if (message.content.indexOf('!zieg') === 0) {
-
-      triggerImage(message, "goat_fucker", true);
-
-    }
 
     /********************************************/
     /*             KEYWORD TRIGGERS             */
@@ -506,21 +501,6 @@ client.on('message', async message => {
     if (message.content.toLowerCase().includes('black')) {
 
       triggerImage(message, "cmonbruh", false);
-
-    }
-    if (message.content.toLowerCase().includes('fortnite')) {
-
-      triggerImage(message, "fortnite_sucks", false);
-
-    }
-    if (message.content.toLowerCase().includes('tank')) {
-
-      triggerImage(message, "league_of_tanks", false);
-
-    }
-    if (message.content.toLowerCase().includes('mexican')) {
-
-      triggerImage(message, "mexican", false);
 
     }
 //     if (message.content.toLowerCase().includes('amazon.com')) {
