@@ -25,9 +25,9 @@ Audio Triggers:
 !sameGame
 !snap
 !tinsel
-!yooo
 !warus
 !weeee
+!yooo
 
 Image Triggers:
 !prime
