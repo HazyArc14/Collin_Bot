@@ -4,7 +4,6 @@ const client = new Discord.Client();
 const TalkedRecently = new Set();
 
 var conditionOverride = false;
-var allowAmazonLinks = false;
 var allowStatusUpdate = true;
 var isReady = true;
 var vaultOpen = false;
@@ -214,46 +213,26 @@ client.on('message', async message => {
         }
         
     }
-//     if (message.content.indexOf('!amazon') === 0) {
+//     if (message.content.indexOf('!vaultOpen') === 0 && (message.author.id == "148630426548699136" || message.author.id == "93105200365043712")) {
         
-//         var amazonValue = message.content.slice(8);
-//         if (amazonValue == "true") {
-//             allowAmazonLinks = true;
-//             message.channel.send("Amazon Links Allowed Set: " + allowAmazonLinks);
+//         var vaultOpenValue = message.content.slice(11);
+//         if (vaultOpenValue == "true") {
+//             vaultOpen = true;
+//             message.channel.send("Vault Open Set: " + vaultOpen);
 //             message.delete()
 //               .then(msg => console.log(`Deleted message from ${msg.author.username}`))
 //               .catch(console.error);
             
 //         } else {
-//             allowAmazonLinks = false;
-//             console.log("Condition Override Set: " + allowAmazonLinks);
-//             message.channel.send("Amazon Links Allowed Set: false");
+//             vaultOpen = false;
+//             console.log("Condition Override Set: " + vaultOpen);
+//             message.channel.send("Vault Open Set: false");
 //             message.delete()
 //               .then(msg => console.log(`Deleted message from ${msg.author.username}`))
 //               .catch(console.error);
 //         }
         
 //     }
-    if (message.content.indexOf('!vaultOpen') === 0 && (message.author.id == "148630426548699136" || message.author.id == "93105200365043712")) {
-        
-        var vaultOpenValue = message.content.slice(11);
-        if (vaultOpenValue == "true") {
-            vaultOpen = true;
-            message.channel.send("Vault Open Set: " + vaultOpen);
-            message.delete()
-              .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-              .catch(console.error);
-            
-        } else {
-            vaultOpen = false;
-            console.log("Condition Override Set: " + vaultOpen);
-            message.channel.send("Vault Open Set: false");
-            message.delete()
-              .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-              .catch(console.error);
-        }
-        
-    }
 
     /********************************************/
     /*            MESSAGE TRIGGERS              */
@@ -308,33 +287,33 @@ client.on('message', async message => {
       }
 
     }      
-    if (message.content.indexOf('!bass') === 0) {
+//     if (message.content.indexOf('!bass') === 0) {
         
-      if (!TalkedRecently.has("bass_timeout") && vaultOpen) {
+//       if (!TalkedRecently.has("bass_timeout") && vaultOpen) {
 
-        if (typeof splitMessage[1] === 'undefined') {
-          triggerAudio(message, "bass", "");
-        } else {
-          triggerAudio(message, "bass", splitMessage[1]);
-        }
+//         if (typeof splitMessage[1] === 'undefined') {
+//           triggerAudio(message, "bass", "");
+//         } else {
+//           triggerAudio(message, "bass", splitMessage[1]);
+//         }
           
-        TalkedRecently.add("bass_timeout");
-        setTimeout(() => {
-          // Allows the command to be played again after 10 minutes
-          TalkedRecently.delete("bass_timeout");
-        }, 600000);
+//         TalkedRecently.add("bass_timeout");
+//         setTimeout(() => {
+//           // Allows the command to be played again after 10 minutes
+//           TalkedRecently.delete("bass_timeout");
+//         }, 600000);
           
-      } else {
+//       } else {
        
-          message.channel.send("Command is on a Timeout");
+//           message.channel.send("Command is on a Timeout");
           
-          message.delete()
-              .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-              .catch(console.error);
+//           message.delete()
+//               .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+//               .catch(console.error);
           
-      }
+//       }
 
-    }
+//     }
     if (message.content.indexOf('!celsoHere') === 0) {
 
       if (typeof splitMessage[1] === 'undefined') {
@@ -371,15 +350,15 @@ client.on('message', async message => {
       }
 
     }
-    if (message.content.indexOf('!fortFucker') === 0) {
+//     if (message.content.indexOf('!fortFucker') === 0) {
 
-      if (typeof splitMessage[1] === 'undefined') {
-        triggerAudio(message, "fortFucker", "");
-      } else {
-        triggerAudio(message, "fortFucker", splitMessage[1]);
-      }
+//       if (typeof splitMessage[1] === 'undefined') {
+//         triggerAudio(message, "fortFucker", "");
+//       } else {
+//         triggerAudio(message, "fortFucker", splitMessage[1]);
+//       }
         
-    }
+//     }
     if (message.content.indexOf('!goldfish') === 0) {
 
       if (typeof splitMessage[1] === 'undefined') {
@@ -434,15 +413,15 @@ client.on('message', async message => {
       }
 
     }
-    if (message.content.indexOf('!magicResist') === 0) {
+//     if (message.content.indexOf('!magicResist') === 0) {
 
-      if (typeof splitMessage[1] === 'undefined') {
-        triggerAudio(message, "magicResist", "");
-      } else {
-        triggerAudio(message, "magicResist", splitMessage[1]);
-      }
+//       if (typeof splitMessage[1] === 'undefined') {
+//         triggerAudio(message, "magicResist", "");
+//       } else {
+//         triggerAudio(message, "magicResist", splitMessage[1]);
+//       }
 
-    }
+//     }
     if (message.content.indexOf('!monkey') === 0) {
 
       if (typeof splitMessage[1] === 'undefined') {
@@ -452,30 +431,12 @@ client.on('message', async message => {
       }
 
     }
-    if (message.content.indexOf('!neck') === 0) {
-
-      if (typeof splitMessage[1] === 'undefined') {
-        triggerAudio(message, "neck", "");
-      } else {
-        triggerAudio(message, "neck", splitMessage[1]);
-      }
-
-    }
     if (message.content.indexOf('!sameGame') === 0) {
 
       if (typeof splitMessage[1] === 'undefined') {
         triggerAudio(message, "sameGame", "");
       } else {
         triggerAudio(message, "sameGame", splitMessage[1]);
-      }
-
-    }
-    if (message.content.indexOf('!snap') === 0) {
-
-      if (typeof splitMessage[1] === 'undefined') {
-        triggerAudio(message, "snap", "");
-      } else {
-        triggerAudio(message, "snap", splitMessage[1]);
       }
 
     }
@@ -506,15 +467,15 @@ client.on('message', async message => {
       }
         
     }
-    if (message.content.indexOf('!watch') === 0) {
+//     if (message.content.indexOf('!watch') === 0) {
 
-      if (typeof splitMessage[1] === 'undefined') {
-        triggerAudio(message, "watch", "");
-      } else {
-        triggerAudio(message, "watch", splitMessage[1]);
-      }
+//       if (typeof splitMessage[1] === 'undefined') {
+//         triggerAudio(message, "watch", "");
+//       } else {
+//         triggerAudio(message, "watch", splitMessage[1]);
+//       }
         
-    }
+//     }
     if (message.content.indexOf('!weeee') === 0) {
 
       if (typeof splitMessage[1] === 'undefined') {
