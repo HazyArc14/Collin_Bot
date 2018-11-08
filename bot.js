@@ -88,7 +88,9 @@ function triggerAudio(message, trigger, voiceChannelId) {
       voiceChannel.join().then(connection => {
         const dispatcher = connection.playFile("./assets/audio/" + trigger + ".mp3");
         dispatcher.on("end", end => {
-            voiceChannel.leave();
+            setTimeout(function(){
+                voiceChannel.leave();
+            }, 2000);
         });
       }); 
     } catch(err) {
